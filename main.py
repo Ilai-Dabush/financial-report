@@ -37,9 +37,4 @@ def get_info():
 
 
 if __name__ == '__main__':
-    # d = yf.Ticker("SPY")
-    # print(d.history(period="1d")["Close"][-1])
-    # print(d.info.get("previousClose"))
     get_info()
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
