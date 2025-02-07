@@ -21,7 +21,8 @@ COMPANIES = {
     "CLSK": "cleanspark",
     "DDOG": "דאטה דוג",
     "GOOGL": "גוגל",
-    "AMZN": "אמזון"
+    "AMZN": "אמזון",
+    "ESTC": "אלסטיק"
 }
 
 
@@ -30,7 +31,7 @@ def cal_change_from_open(price: int, open_: int):
 
 
 def get_info():
-    data = yf.Tickers("AAPL TSLA SNOW CLBT MSI INTU PLTR META JPM NVDA SPY QQQ IBIT ETHA MSTR IREN CLSK DDOG GOOGL AMZN")
+    data = yf.Tickers("AAPL TSLA SNOW CLBT MSI INTU PLTR META JPM NVDA SPY QQQ IBIT ETHA MSTR IREN CLSK DDOG GOOGL AMZN ESTC")
     msg = "סיכום יום:\n"
     for ticker_code, ticker_data in data.tickers.items():
         change_from_open = 0
