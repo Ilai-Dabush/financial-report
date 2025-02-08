@@ -705,6 +705,20 @@ files = [
 ]
 
 [[package]]
+name = "whatsapp-api-client-python"
+version = "0.0.49"
+description = "This library helps you easily create a Python application with WhatsApp API."
+optional = false
+python-versions = ">=3.7"
+groups = ["main"]
+files = [
+    {file = "whatsapp_api_client_python-0.0.49.tar.gz", hash = "sha256:444d474bfeb6c5c407193f72249b0c21ff67763e614b0fdb821dbf5466efd397"},
+]
+
+[package.dependencies]
+requests = ">=2.31.0"
+
+[[package]]
 name = "yfinance"
 version = "0.2.52"
 description = "Download market data from Yahoo! Finance API"
@@ -736,4 +750,4 @@ repair = ["scipy (>=1.6.3)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "3.10.7"
-content-hash = "ad7ce35a98f466ea6977cd438f0e02c733ee9ba14a5aabba9072d2e676d4eb5f"
+content-hash = "2c7727273ca34019260e54017ba4731838a94d69b5ad2cef61fd01b3d042762f"

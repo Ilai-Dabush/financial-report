@@ -22,7 +22,8 @@ COMPANIES = {
     "DDOG": "דאטה דוג",
     "GOOGL": "גוגל",
     "AMZN": "אמזון",
-    "ESTC": "אלסטיק"
+    "ESTC": "אלסטיק",
+    "7974.T": "נינטנדו"
 }
 
 
@@ -31,7 +32,7 @@ def cal_change_from_open(price: int, open_: int):
 
 
 def get_info():
-    data = yf.Tickers("AAPL TSLA SNOW CLBT MSI INTU PLTR META JPM NVDA SPY QQQ IBIT ETHA MSTR IREN CLSK DDOG GOOGL AMZN ESTC")
+    data = yf.Tickers(" ".join(COMPANIES.keys()))
     msg = "סיכום יום:\n"
     for ticker_code, ticker_data in data.tickers.items():
         change_from_open = 0
