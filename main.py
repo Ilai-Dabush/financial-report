@@ -2,6 +2,8 @@ import yfinance as yf
 import pyperclip
 
 COMPANIES = {
+    "SPY": "סנופי",
+    "QQQ": "נאסדק 100",
     "AAPL": "אפל",
     "TSLA": "טסלה",
     "SNOW": "סנואו",
@@ -11,8 +13,6 @@ COMPANIES = {
     "META": "מטא",
     "JPM": "JP",
     "NVDA": "נבידיה",
-    "QQQ": "נאסדק 100",
-    "SPY": "סנופי",
     "PLTR": "פלאנטיר",
     "IBIT": "ביטקוין",
     "ETHA": "איתריום",
@@ -35,7 +35,6 @@ def get_info():
     data = yf.Tickers(" ".join(COMPANIES.keys()))
     msg = "סיכום יום:\n"
     for ticker_code, ticker_data in data.tickers.items():
-        change_from_open = 0
         history = ticker_data.history(period="2d")
         if ticker_data.info.get("currentPrice"):
             change_from_open = cal_change_from_open(ticker_data.info.get("currentPrice"), ticker_data.info.get("previousClose"))
